@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 2 - Aplicações de IA</title>
+        <link rel="icon" href="mackai-logo.png" type="image/png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #282c34;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        img {
+            width: 100px;
+            margin-top: 20px;
+        }
+        section {
+            margin: 50px 0;
+        }
+        button {
+            display: block;
+            margin: 15px 0;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: #282c34;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="mackai-logo.png" alt="Imagem sobre IA">
+        <h1>Semana 2 - Aplicações de IA</h1>
+    </header>
+<center>
+    <section>
+        <!-- Botão com proteção de senha -->
+        <button onclick="checkPassword('Google - Reconhecimento de Imagens', 'https://cloud.google.com/vision?utm_source=google&utm_medium=cpc&utm_campaign=1707800-GCP-DR-LATAM-BR-pt-GAds-BKWS-e-LUAC0020783&utm_content=text-ad-none-any-DEV_c-CRE_547331812249-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt_AI+and+ML-Vision+AI-KWID_43700080892895069-kwd-1653888088533&utm_term=KW_google%20buscar%20por%20foto-ST_Google+buscar+por+foto&gad_source=1&gclid=Cj0KCQjwyL24BhCtARIsALo0fSCKcJFdag64USsSw1mXOj42R6libDyUODKjgrAcO71366QdVPrqvlIaAnUIEALw_wcB&gclsrc=aw.ds#demo')">Google - Reconhecimento de Imagens</button>
+        <button onclick="checkPassword('VocalRemover - Música', 'https://soundraw.io/')">Soundraw - Música</button>
+        <button onclick="checkPassword('Bloom - Criatividade da IA', 'https://colab.research.google.com/drive/1NsIZDsOdfi8wKb7g09QNtgWz2_A37DBA#scrollTo=rAWWBjQTzmQQ')">Bloom - 'Criatividade' da IA</button>
+        <button onclick="checkPassword('IA aplicada a matemática', 'https://photomath.com/install/')">IA aplicada a matemática</button>
+    </section>
+</center>
+    <script>
+        function checkPassword(linkName, linkUrl) {
+            // Aqui você define as senhas
+            const passwords = {
+                "Google - Reconhecimento de Imagens": "iaimg",
+                "VocalRemover - Música": "iamusic",
+                "Bloom - Criatividade da IA": "iacria",
+                "IA aplicada a matemática": "iasalvadoradeprovas"
+            };
+
+            // Solicita ao usuário a senha
+            const userPassword = prompt(`Digite a senha para acessar ${linkName}:`);
+
+            // Verifica se a senha está correta
+            if (userPassword === passwords[linkName]) {
+                // Abre o link correto em uma nova janela
+                window.open(linkUrl, '_blank');
+            } else {
+                alert('Senha incorreta!');
+            }
+        }
+    </script>
+</body>
+</html>
